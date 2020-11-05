@@ -3,33 +3,24 @@ package com.company;
 import java.util.Random;
 
 public class Monsters {
-    int m_iBarbarian;
-    int m_iSorcerer;
-    int m_iPointLifeBar=60;
-    int m_iPointLifeSor=20;
 
-    public int arrayMonsters(int[] p_iBarbarian , int[] p_iSorcerer){
-        m_iBarbarian=p_iBarbarian;
-        m_iSorcerer=p_iSorcerer;
-        return arrayMonsters();
-    }
+    Random random = new Random();
+    String m_sBarbarian="Barbarian";
+    String m_sSorcerer="Sorcerer";
+    String[] myStrings={"Barbarian","Sorcerer"};
+    int monster = random.nextInt(myStrings.length);
 
-    public void barbarian(){
-        System.out.println("\t# Here is a BARBARIAN and i have an AXE ! "); ;
 
-    }
-    public void sorcerer(){
-        System.out.println("\t# Here is a SORCERER and i have a strike-of-lignt  !");
+
+
+    public int monstersToParse (String p_sBarbarian , String p_sSorcerer){
+        m_sBarbarian = Integer.parseInt(p_sBarbarian);
+        m_sSorcerer=Integer.parseInt(p_sSorcerer);
+        return monstersToParse();
 
     }
-    public void monsterAttack(){
-            if(arrayMonsters()==m_iBarbarian){
-                System.out.println("here i m a barbarian, i get an Axe !");
 
-            }
 
-        }
-    }
 
 
 
