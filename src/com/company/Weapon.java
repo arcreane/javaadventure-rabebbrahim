@@ -1,6 +1,8 @@
 package com.company;
 
 public class Weapon {
+    // declaration of weapons of the player an monsters
+
     String m_sWeaponBar="Axe";
     String m_sWeaponSor= "StrikeOfLight";
     String m_sWeaponPlayerSor="WaterFlask";

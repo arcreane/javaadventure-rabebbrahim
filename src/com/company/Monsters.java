@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Random;
 
-public class Monsters {
+public class Monsters extends Damages {
 
     Random random = new Random();
     String m_sBarbarian="Barbarian";
