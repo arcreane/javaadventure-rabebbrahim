@@ -2,26 +2,34 @@ package com.company;
 
 import java.util.Random;
 
+
 public class Monsters extends Damages {
+    Random random;
+    String m_Monsters;
+    String m_Barbarian = "Barbarian", m_Sorcerer = "Sorcerer";
 
-    Random random = new Random();
-    String m_sBarbarian="Barbarian";
-    String m_sSorcerer="Sorcerer";
-    String[] myStrings={"Barbarian","Sorcerer"};
-    int monster = random.nextInt(myStrings.length);
+    public Monsters() {
+        random = new Random();
+        String[] monsters = new String[]{"Sorcerer", "Barbarian"};
+        String m_Monster = monsters[random.nextInt(monsters.length)];
+
+        if (m_Monsters.equals(m_Barbarian)) {
+            System.out.println("here is a Barbarian!");
+        } else {
+            System.out.println("here is a Sorcerer!");
 
 
+        }
 
-
-    public int monstersToParse (String p_sBarbarian , String p_sSorcerer){
-        m_sBarbarian = Integer.parseInt(p_sBarbarian);
-        m_sSorcerer=Integer.parseInt(p_sSorcerer);
-        return monstersToParse();
 
     }
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+

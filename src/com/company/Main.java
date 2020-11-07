@@ -7,46 +7,40 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Random rand=new Random();
-        Player player = new Player();
-        PlayGame playGame = new PlayGame();
 
-        boolean keepPlaying= true;
-        Scanner sc= new Scanner(System.in);
-        while(keepPlaying){
+        Player hero = new Player();
+        Dungeon dungeon = new Dungeon();
+        PlayGame play =new PlayGame();
+
+        boolean keepPlaying = true;
+        Scanner sc = new Scanner(System.in);
+        while (keepPlaying) {
             System.out.println("--------Game Menu---------");
-            System.out.println("Choose your forward optien:");
-            System.out.println("(1)-Play Game \n"+"(2)-Replay Game \n"+"(3)-Score Game \n"+"(3)-Quit Game");
-            System.out.println("---------------------------");}
-            int userInput = sc.nextInt();
-        switch(userInput){
-            case 1->{PlayGame.startGame()};
-            case 2->{keepPlaying=true};
-            case 3-> {PlayGame.gameOver() } ;
-            default->{"Error: try again !"};
+            System.out.println("Choose your forward option:");
+            System.out.println("(1)-Play Game \n" + "(2)-Replay Game \n" + "(3)-Score Game \n" + "(4)-Quit Game");
+            System.out.println("---------------------------");
         }
-        public static int getPlayerInput(){
-
-            int userInput=0;
-        try{
-            userInput= sc.nextInt();
-        }catch (Exception e){
-            System.out.println("désolé entree erronée, essai une autre fois!");
-        }sc.nextLine();
-        return userInput;
-    }
-
-        ArrayList<Monsters> monsters = new ArrayList<>();
-
-    PlayGame.start.Game();
-        Dungeon.enterRoom(int[5]);
-        monsters.add(new Barbarian().barbarianAttack());
-        monsters.add(new Sorcerer().sorcererAttack());
-        player.isAlive();
-        playGame.gameOver();
-
-
-
+        int userInput = sc.nextInt();
+        switch (userInput) {
+            case 1 -> {
+                play.startGame(hero, room);
+            }
+            case 2 -> {
+                keepPlaying = true;
+            }
+            case 3 -> {
+                play.gameOver(hero);
+            }
+            case 4 -> {
+                keepPlaying = false;
+            }
+            default -> {
+                System.out.println("Error: try again !");
+            }
+        }
+        dungeon.enterDungeon(hero);
+        play.startGame(hero);
+        play.gameOver(hero);
 
 
 
